@@ -8,6 +8,8 @@ export interface DialogButtonProps extends ButtonProps {}
 /** This is used to add a button to the Dialog.
  * Receives all [Button](button#props) props. */
 export const DialogButton: RneFunctionComponent<DialogButtonProps> = ({
+  title = 'ACTION',
+  type = 'clear',
   titleStyle,
   ...rest
 }) => {
@@ -19,15 +21,13 @@ export const DialogButton: RneFunctionComponent<DialogButtonProps> = ({
         width: 'auto',
       }}
       testID="Dialog__Button"
+      title={title}
+      type={type}
       {...rest}
     />
   );
 };
 
-DialogButton.defaultProps = {
-  title: 'ACTION',
-  type: 'clear',
-};
 
 const styles = StyleSheet.create({
   buttonTitle: {
