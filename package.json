@@ -6,7 +6,6 @@
   "workspaces": {
     "packages": [
       "packages/*",
-      "example",
       "scripts/docgen"
     ]
   },
